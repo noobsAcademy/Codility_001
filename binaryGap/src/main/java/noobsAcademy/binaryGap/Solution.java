@@ -18,14 +18,14 @@ public class Solution {
 	    if (c == '0') {
 		zerosCounter++;
 	    } else {
-		maxNumberOfConsecutiveZeros = getMax(zerosCounter, maxNumberOfConsecutiveZeros);
+		maxNumberOfConsecutiveZeros = updateMax(zerosCounter, maxNumberOfConsecutiveZeros);
 		zerosCounter = 0;
 	    }
 	}
 	return maxNumberOfConsecutiveZeros;
     }
 
-    private static int getMax(int zerosCounter, int maxNumberOfConsecutiveZeros) {
+    private static int updateMax(int zerosCounter, int maxNumberOfConsecutiveZeros) {
 	if (zerosCounter > maxNumberOfConsecutiveZeros) {
 	    return zerosCounter;
 	}
